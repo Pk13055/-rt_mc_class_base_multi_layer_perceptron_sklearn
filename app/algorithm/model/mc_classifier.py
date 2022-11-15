@@ -85,7 +85,7 @@ class Classifier:
 
     def __init__(
         self,
-        hidden_layer_sizes=(100,),
+        hidden_layer_sizes=100,
         activation="relu",
         *,
         solver="adam",
@@ -97,7 +97,7 @@ class Classifier:
         max_iter=200,
         **kwargs,
     ) -> None:
-        self.hidden_layer_sizes = hidden_layer_sizes
+        self.hidden_layer_sizes = (hidden_layer_sizes,)
         self.activation = activation
         self.solver = solver
         self.alpha = alpha
